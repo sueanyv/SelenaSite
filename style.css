@@ -1,0 +1,312 @@
+/* || General */
+#header {
+  height: 250px;
+}
+
+body {
+  width: 100%;
+  font-family: serif;
+  background-color:#fafafa;
+
+}
+
+#selsig {
+  width: 250px;
+  display: block;
+  padding-top: 52px;
+  padding-left: 300px;
+}
+
+#footer {
+  height: 50px;
+  background: #6b0080;
+  position: absolute;
+  width: 100%;
+}
+
+#copyright {
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  font-family: "Times New Roman";
+}
+
+#navigation {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+#navigation li {
+  display: inline;
+}
+
+#navigation a {
+  display: inline-block;
+  padding: 10px;
+  color: black;
+  font-size: 24px;
+  font-family: serif;
+  text-decoration: none;
+}
+
+#navigation a:hover {
+  color: #6b0080;
+}
+
+.imgsourc {
+  display: block;
+  color: #6b0080;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none
+}
+
+/* || Home(index) */
+#homecontent {
+  height: 1600px;
+  padding: 136px 80px 0px 80px;
+}
+
+#homeselpicbox {
+  text-align: center;
+}
+
+#selbanner {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 700px;
+}
+
+#selnametitle {
+  text-align: center;
+  font-family: serif;
+  font-size: 40px;
+  margin: 0;
+}
+
+#birthndeath {
+  display: block;
+  text-align: center;
+  font-family: serif;
+  font-size: 22px;
+  margin: 0;
+}
+
+#selparag {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  padding: 50px 0px 50px 0px;
+  font-size: 22px;
+  font-family: serif;
+}
+
+/* || Music Page */
+/* ************************Album box******** */
+#discontainer {
+  display: flex;
+  padding: 50px 0px 124px 0px;
+}
+
+#discontainer>div {
+  flex: 1;
+}
+
+#distitle {
+  font-size: 30px;
+  padding: 113px 0px 0px 68px;
+  font-family: serif;
+}
+
+.albums {
+  border-style: outset;
+  border-color: #6b0080;
+  margin-left: auto;
+  margin-right: auto;
+  width: 320px;
+  height: 320px;
+}
+
+.alcover {
+  width: 320px;
+  height: 320px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.songstitl {
+  font-family: Times;
+  text-align: center;
+  font-size: 25px;
+}
+
+.songli {
+  padding: 0px 0px 0px 120px;
+  font-family: serif;
+  ;
+  font-size: 18px;
+}
+
+.songli li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+/* Reference - overlay  code used below came
+from https://www.matthinchliffe.dev/2013/12/16/smooth-text-overlays-with-css-transforms.html  */
+.albums {
+  position: relative;
+  overflow: hidden;
+  /* Only the -webkit- prefix is required these days */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.albums::before {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: transparent;
+  transition: background .35s ease-out;
+}
+
+.albums:hover::before {
+  background: rgba(0, 0, 0, .5);
+}
+
+.alcover {
+  display: block;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  color: white;
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  transition: -webkit-transform .35s ease-out;
+  transition: transform .35s ease-out;
+}
+
+.albums:hover .overlay {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.title {
+  -webkit-transform: translateY(-webkit-calc(-100% - 10px));
+  transform: translateY(calc(-100% - 10px));
+  transition: -webkit-transform .35s ease-out;
+  transition: transform .35s ease-out;
+}
+
+.albums:hover .title {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+/************* video box ***********/
+#videoscont {
+  height: 800px;
+}
+
+#videotitle {
+  padding: 10px 0px 0px 68px;
+  font-size: 30px;
+}
+
+#videosbox {
+  display: flex;
+  padding: 50px 0px 0px 0px;
+}
+
+#videosbox>div {
+  flex: 1;
+}
+
+.videos {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ||  News Page */
+#news {
+  padding-top: 40px;
+  margin-left: 400px;
+  font-size: 30px;
+  font-family: serif;
+}
+
+#infodisclaimer {
+  padding-top: 40px;
+  margin-left: 400px;
+  font-size: 12px;
+  font-family: serif;
+}
+
+.articlescontainer {
+  height: 1200px;
+  display: block;
+  padding-bottom: 100px;
+}
+
+.artcilebox {
+  width: 600px;
+  height: 300px;
+  margin: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.articlepic {
+  width: 280px;
+  padding-top: 60px;
+}
+
+.articttitle {
+  font-family: serif;
+  font-size: 20px;
+  color: black;
+}
+
+.paracontainer {
+  display: block;
+  float: right;
+  height: 300px;
+  width: 320px;
+}
+
+.newspara {
+  padding: 20px;
+  overflow: hidden;
+}
+
+.articpar {
+  font-size: 15px;
+  color: black;
+  font-family: serif;
+}
+
+.redmore {
+  text-decoration: none;
+  font-size: 16px;
+  color: #6b0080;
+  float: right;
+}
+
+.paracontainer a:hover {
+  color: black;
+}
